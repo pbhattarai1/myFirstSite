@@ -1,5 +1,23 @@
 {
   "dependencies": {
     "express": "^4.18.2"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "server",
+  "version": "1.0.0",
+  "description": "my first sit",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pbhattarai1/myFirstSite.git"
+  },
+  "author": "Pushparaj Bhattarai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pbhattarai1/myFirstSite/issues"
+  },
+  "homepage": "https://github.com/pbhattarai1/myFirstSite#readme"
 }
