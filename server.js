@@ -10,12 +10,27 @@
  *
  ********************************************************************************/
 
-var HTTP_PORT = process.env.PORT || 8080;
 var express = require("express");
 var app = express();
 
-app.get("/", (req, res) => {
-  res.send("Hello World!");
+var HTTP_PORT = process.env.PORT || 8080;
+
+// call this function after the http server starts listening for requests
+function onHttpStart() {
+  console.log("Express http server listening on: " + HTTP_PORT);
+}
+
+// setup a 'route' to listen on the default url path (http://localhost)
+app.get("/", function (req, res) {
+  res.send(
+    "Pushparaj Bhattarai <br /> Student ID : 159658210 <a href='/about'>Go to the about page</a>"
+  );
 });
 
-app.listen(HTTP_PORT);
+// setup another route to listen on /about
+app.get("/about", function (req, res) {
+  res.send("<h3>About Pushparaj <br></h3>");
+});
+
+// setup http server to listen on HTTP_PORT
+app.listen(HTTP_PORT, onHttpStart);
